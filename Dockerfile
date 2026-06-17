@@ -13,7 +13,7 @@ RUN npm install --legacy-peer-deps
 
 RUN npm install @whiskeysockets/baileys@6.7.0 --save --legacy-peer-deps
 
-COPY .env.example .env
+RUN cp .env.example .env
 
 RUN npm run build
 
