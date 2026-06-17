@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     openssl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone --depth 1 --branch v2.2.3 https://github.com/EvolutionAPI/evolution-api.git .
+RUN git clone --depth 1 --branch main https://github.com/EvolutionAPI/evolution-api.git .
 
 RUN npm install --legacy-peer-deps
 
