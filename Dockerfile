@@ -11,9 +11,11 @@ RUN git clone --depth 1 --branch main https://github.com/EvolutionAPI/evolution-
 
 RUN npm install --legacy-peer-deps
 
-RUN npm install @whiskeysockets/baileys@6.7.0 --save --legacy-peer-deps
+RUN npm install @whiskeysockets/baileys@latest --save --legacy-peer-deps
 
 RUN cp .env.example .env
+
+RUN npx prisma generate --schema ./prisma/postgresql-schema.prisma
 
 RUN npm run build
 
