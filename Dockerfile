@@ -21,4 +21,4 @@ RUN npm run build
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "npx prisma migrate deploy --schema ./prisma/postgresql-schema.prisma && node dist/main"]
+CMD ["sh", "-c", "cp -r ./prisma/postgresql-migrations ./prisma/migrations && npx prisma migrate deploy --schema ./prisma/postgresql-schema.prisma && node dist/main"]
